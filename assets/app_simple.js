@@ -14,15 +14,15 @@
 
   function card(item){
     const name = toSotteok(item.name);
-    const cat = item.category ? String(item.category) : '';
+   
     const text = item.text ? String(item.text) : '';
 
-    const catPill = cat ? `<div class="pill">${esc(cat)}</div>` : '';
+    
     return `
       <article class="card">
         <div class="cardTop">
           <div class="name">${esc(name)}</div>
-          ${catPill}
+         
         </div>
         <div class="text">${esc(text).replace(/\n/g,'<br>')}</div>
       </article>
