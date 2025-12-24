@@ -7,6 +7,13 @@ const pageSize = 20;
 function escapeHtml(str){
   return str.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 }
+
+function formatName(name){
+  if(!name) return "소떡";
+  // 기존 데이터에 '익명 123' 또는 '익명123' 형태가 들어있어 그 부분만 교체
+  return name.replace(/^익명\s*/,'소떡 ').replace(/^익명/,'소떡');
+}
+
 function byQuery(items, q){
   if(!q) return items;
   const qq = q.trim().toLowerCase();
@@ -38,7 +45,7 @@ function render(){
   grid.innerHTML = slice.map(it => `
     <div class="card" id="c${it.id}">
       <div class="head">
-        <div class="name">${escapeHtml(it.name)}</div>
+        <div class="name">${escapeHtml(formatName(it.name))}</div>
         <div class="chip">${escapeHtml(it.category)}</div>
       </div>
       <div class="text">${escapeHtml(it.text)}</div>
@@ -100,8 +107,8 @@ async function init(){
     setTimeout(()=> {
       const el = document.getElementById(`c${id}`);
       if(el){
-        el.style.borderColor = "rgba(251,113,133,.65)";
-        el.style.boxShadow = "0 0 0 3px rgba(251,113,133,.12)";
+        el.style.borderColor = "rgba(51,198,182,.65)";
+        el.style.boxShadow = "0 0 0 3px rgba(51,198,182,.14)";
         el.scrollIntoView({behavior:"smooth", block:"center"});
       }
     }, 400);

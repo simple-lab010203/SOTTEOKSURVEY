@@ -4,14 +4,14 @@
   --card:#111827;
   --muted:#94a3b8;
   --text:#e5e7eb;
-  --accent:#fb7185;
+  --accent:#33c6b6;
   --line:#1f2937;
 }
 *{box-sizing:border-box}
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", "NanumGothic", Arial;
-  background: radial-gradient(1200px 600px at 20% -10%, rgba(251,113,133,.18), transparent 60%),
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(51,198,182,.18), transparent 60%),
               radial-gradient(900px 500px at 80% 0%, rgba(59,130,246,.10), transparent 55%),
               var(--bg);
   color:var(--text);
@@ -48,7 +48,7 @@ h1{font-size:26px;margin:0 0 8px;letter-spacing:-.02em}
 .input{flex:1;min-width:240px}
 .select{min-width:180px}
 .btn{cursor:pointer}
-.btn:hover{border-color: rgba(251,113,133,.6)}
+.btn:hover{border-color: rgba(51,198,182,.65)}
 .hr{height:1px;background:var(--line);margin:18px 0}
 .grid{display:grid;grid-template-columns:1fr;gap:12px}
 @media(min-width:900px){.grid{grid-template-columns:1fr 1fr;}}
@@ -76,7 +76,7 @@ h1{font-size:26px;margin:0 0 8px;letter-spacing:-.02em}
   padding:6px 8px;border-radius:10px;
   cursor:pointer;
 }
-.smallbtn:hover{border-color: rgba(251,113,133,.6)}
+.smallbtn:hover{border-color: rgba(51,198,182,.65)}
 .footer{color:var(--muted);font-size:12px;line-height:1.6;margin:18px 0 0}
 .pager{display:flex;gap:8px;align-items:center;justify-content:center;margin:16px 0 4px}
 .pager .btn{padding:8px 10px;border-radius:12px}
